@@ -1,11 +1,15 @@
 import "./titleComponent.css"
 
-const titleComponent = () =>{
+const TitleComponent = () =>{
     return(
         <>
-        
+            <div className="titleComponent">
+                <div className="title">
+                    FULL STACK DEVELOPER
+                </div>
+            </div>
         </>
     )
 }
 
-export default titleComponent;
+export default TitleComponent;

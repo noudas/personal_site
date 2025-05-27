@@ -1,0 +1,113 @@
+@import url("../colors.css");
+
+.titleComponent {
+    margin-top: 10px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--verde);
+    border-radius: 1.25rem;
+    border: 3px solid;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.80);
+    animation: looneyBounce 4s ease-in-out reverse infinite;
+    transition: transform 1.5s ease;
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+    will-change: transform;
+}
+
+/* Create multiple trail elements */
+.titleComponent::before,
+.titleComponent::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+    background-color: var(--verde);
+    border: 3px solid;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.titleComponent:hover {
+    animation: speen 1.5s ease-in-out;
+    cursor: pointer;
+}
+
+/* Trail animation - multiple delayed copies */
+.titleComponent:hover::before {
+    animation: trailSpin1 1.5s ease-in-out;
+}
+
+.titleComponent:hover::after {
+    animation: trailSpin2 1.5s ease-in-out;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-family: "League Spartan", sans-serif;
+    font-weight: 800;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Looney Tunes-style bounce */
+@keyframes looneyBounce {
+    0%   { transform: translateY(0) scale(1); }
+    25%  { transform: translateY(2px) scale(1.01); }
+    50%  { transform: translateY(4px) scale(0.99); }
+    75%  { transform: translateY(2px) scale(1.02); }
+    100% { transform: translateY(0) scale(1); }
+}
+
+/* Main spin effect */
+@keyframes speen {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* First trail - slightly behind */
+@keyframes trailSpin1 {
+    0%   { 
+        transform: rotate(0deg); 
+        opacity: 0.6; 
+    }
+    50%  { 
+        opacity: 0.4; 
+    }
+    100% { 
+        transform: rotate(330deg); /* 30 degrees behind */
+        opacity: 0; 
+    }
+}
+
+/* Second trail - further behind */
+@keyframes trailSpin2 {
+    0%   { 
+        transform: rotate(0deg); 
+        opacity: 0.4; 
+    }
+    50%  { 
+        opacity: 0.2; 
+    }
+    100% { 
+        transform: rotate(300deg); /* 60 degrees behind */
+        opacity: 0; 
+    }
+}
+
+@media (max-width: 480px) {
+    .titleComponent {
+        padding: 0.75rem;
+    }
+}
