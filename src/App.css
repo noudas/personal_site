@@ -1,13 +1,15 @@
 body {
   max-width: 1440px;
   width: 100%;           /* Ensure responsiveness */
-  margin: 0 auto;         /* Center the content horizontally */
+  height: auto;
+  margin: 40px auto;         /* Center the content horizontally */
   padding: 0 20px;
   box-sizing: border-box;
 }
 
 .skills-component-container {
   margin-top: 40px;
+  margin-bottom: 60px;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;

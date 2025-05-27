@@ -1,0 +1,68 @@
+@import url("../colors.css");
+
+.HireMeComponent {
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Prevents it from being too wide on large screens */
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1.25rem;
+    background-color: var(--vermelho);
+    border: 3px solid;
+    box-shadow:
+        13px 17px 0px rgba(0, 0, 0, 1),
+        -2px 0px 0px var(--roxo),
+        15px 9px 0px var(--azul);
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+    will-change: transform;
+    -webkit-tap-highlight-color: transparent;
+    animation: looneyBounce 4s ease-in-out reverse infinite;
+}
+
+.HireMeComponent:hover {
+    animation: none;
+    background-color: var(--vermelhohover);
+    cursor: pointer;
+}
+
+.hireme {
+    font-size: clamp(2rem, 8vw, 5rem); /* Scales between 2rem and 5rem depending on screen width */
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    text-shadow: 3px 3px 0px var(--amarelo);
+}
+
+.pointer {
+    position: absolute;
+    bottom: -30%;
+    left: 85%;
+    height: auto;
+    z-index: 2; /* Ensure it’s above background but below text if needed */
+    pointer-events: none; /* Optional: allows clicks to pass through */
+}
+
+/* Optional: More precise control on mobile */
+@media (max-width: 600px) {
+    .HireMeComponent {
+        padding: 0.75rem;
+        box-shadow:
+            8px 10px 0px rgba(0, 0, 0, 1),
+            -1px 0px 0px var(--roxo),
+            10px 5px 0px var(--azul);
+    }
+
+    .hireme {
+        font-size: clamp(1.5rem, 10vw, 3rem);
+    }
+}
+
+
+@keyframes looneyBounce {
+    0%   { transform: translateY(0) scale(1); }
+    25%  { transform: translateY(2px) scale(1.01); }
+    50%  { transform: translateY(4px) scale(0.99); }
+    75%  { transform: translateY(2px) scale(1.01); }
+    100% { transform: translateY(0) scale(1); }
+}
