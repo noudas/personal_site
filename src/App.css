@@ -1,0 +1,33 @@
+body {
+  max-width: 1440px;
+  width: 100%;           /* Ensure responsiveness */
+  margin: 0 auto;         /* Center the content horizontally */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.skills-component-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap; /* Optional: wrap on smaller screens */
+}
+
+.skills-component-container img.arrow {
+  height: 300px;
+  flex-shrink: 0; /* Prevent image from shrinking */
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .skills-component-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .skills-component-container img.arrow {
+    transform: rotate(90deg);
+    height: 100px;
+  }
+}
