@@ -1,0 +1,85 @@
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    max-width: 37.5rem;
+}
+
+.skills-container.left {
+    align-items: flex-start;
+}
+
+.skills-container.right {
+    align-items: flex-end;
+}
+
+.skills-title {
+    color: #000000;
+    font-family: "League Spartan", Helvetica;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: normal;
+    text-decoration: underline;
+    white-space: nowrap;
+    margin: 0 0 1rem 0;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5625rem;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-container.left .skills-list {
+    justify-content: flex-start;
+}
+
+.skills-container.right .skills-list {
+    justify-content: flex-end;
+}
+
+.skill-item {
+    flex: 0 0 auto;
+    font-size: 1.25rem;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+    /* Remove list-specific styles that are no longer needed */
+}
+
+@media (max-width: 48rem) {
+    .skills-title {
+        font-size: 2rem;
+    }
+    
+    .skills-list {
+        gap: 1rem;
+    }
+    
+    .skill-item {
+        font-size: 1.125rem;
+        padding: 0.375rem 0.75rem;
+    }
+}
+
+@media (max-width: 30rem) {
+    .skills-title {
+        font-size: 1.75rem;
+    }
+    
+    .skills-list {
+        gap: 0.75rem;
+    }
+    
+    .skill-item {
+        font-size: 1rem;
+        padding: 0.25rem 0.5rem;
+    }
+}
