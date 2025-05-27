@@ -15,6 +15,7 @@
     overflow: visible;
     z-index: 1;
     will-change: transform;
+    -webkit-tap-highlight-color: transparent; /* Remove mobile tap highlight */
 }
 
 /* Create multiple trail elements */
@@ -32,6 +33,7 @@
     opacity: 0;
     pointer-events: none;
     z-index: -1;
+    filter: blur(1px); /* Slight blur for trail effect */
 }
 
 .titleComponent:hover {
@@ -39,13 +41,41 @@
     cursor: pointer;
 }
 
-/* Trail animation - multiple delayed copies */
-.titleComponent:hover::before {
-    animation: trailSpin1 1.5s ease-in-out;
+/* Add click/tap animation for mobile */
+.titleComponent:active {
+    animation: speen 1.5s ease-in-out;
 }
 
-.titleComponent:hover::after {
-    animation: trailSpin2 1.5s ease-in-out;
+/* Use media query to separate desktop hover from mobile tap */
+@media (hover: hover) and (pointer: fine) {
+    /* Desktop hover effects */
+    .titleComponent:hover::before {
+        animation: trailSpin1 1.5s ease-in-out 0.05s;
+    }
+
+    .titleComponent:hover::after {
+        animation: trailSpin2 1.5s ease-in-out 0.1s;
+    }
+}
+
+@media (hover: none) or (pointer: coarse) {
+    /* Mobile tap effects */
+    .titleComponent:active::before {
+        animation: trailSpin1 1.5s ease-in-out 0.05s;
+    }
+
+    .titleComponent:active::after {
+        animation: trailSpin2 1.5s ease-in-out 0.1s;
+    }
+
+    /* Ensure the bounce animation continues on mobile */
+    .titleComponent:hover {
+        animation: looneyBounce 4s ease-in-out reverse infinite, speen 1.5s ease-in-out;
+    }
+
+    .titleComponent:active {
+        animation: looneyBounce 4s ease-in-out reverse infinite, speen 1.5s ease-in-out;
+    }
 }
 
 .title {
