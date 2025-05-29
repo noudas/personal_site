@@ -55,12 +55,29 @@
 }
 
 @media (max-width: 48rem) {
+    .skills-container {
+        max-width: 100%;
+    }
+    
+    .skills-container.left,
+    .skills-container.right {
+        align-items: center;
+    }
+    
     .skills-title {
         font-size: 2rem;
+        text-align: center;
     }
     
     .skills-list {
         gap: 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .skills-container.left .skills-list,
+    .skills-container.right .skills-list {
+        justify-content: center;
     }
     
     .skill-item {
