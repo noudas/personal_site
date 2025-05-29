@@ -21,7 +21,7 @@ const HireMeComponent = () => {
         // Delay before redirecting to LinkedIn
         setTimeout(() => {
             window.open("https://www.linkedin.com/in/jonathankah/", "_blank");
-        }, 1500); // 1.5 seconds for confetti
+        }, 5000); // 1.5 seconds for confetti
     };
 
     return (

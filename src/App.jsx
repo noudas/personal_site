@@ -12,7 +12,7 @@ function App() {
       <div className='skills-component-container'>
         <SkillsComponent direction='left' title='Front End' skills={['REACT','TYPESCRIPT','JAVASCRIPT','HTML','CSS','TAILWIND', 'BOOTSTRAP']} />
         <img src={Arrow} alt="Arrow" className='arrow' />
-        <SkillsComponent direction='right' title='Back End' skills={['PHP','SQL','POSTGRES','PYTHON','NODE','KOTLIN','UML','MONGODB']} />
+        <SkillsComponent direction='right' title='Back End' skills={['PHP','SQL','POSTGRES','PYTHON','NODE','KOTLIN','UML','MONGODB',"EXPRESS"]} />
       </div>
         <HireMeComponent />
     </div>
