@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 20px;
 }
 
-.skills-container.left {
-    align-items: flex-start;
+.skills-container.left{
+align-items: flex-start;
 }
 
 .skills-container.right {
@@ -27,18 +28,18 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
     row-gap: 1rem;
     width: 100%;
-    margin: -0.75rem;
 }
 
 .skills-container.left .skills-list {
     justify-content: flex-start;
+    margin: -0.75rem;
 }
 
 .skills-container.right .skills-list {
     justify-content: flex-end;
+    margin: -0.75rem;
 }
 
 .skill-item {
