@@ -1,5 +1,5 @@
 import './projectComponent.css';
-import Arrow from '../../assets/Arrow.svg';
+import Arrow from '../../assets/ThikkArrow.svg';
 
 
 const ProjectComponent = ({ image, title, description, link }) => {
@@ -13,7 +13,7 @@ const ProjectComponent = ({ image, title, description, link }) => {
       </div>
 
         <a href={link} className="arrow-button" target="_blank" rel="noopener noreferrer">
-        <img src={Arrow} alt="Arrow" className="arrow-icon" />
+            <img src={Arrow} alt="Arrow" className="arrow-icon" />
         </a>
     </div>
   );
