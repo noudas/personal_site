@@ -23,15 +23,16 @@
     line-height: normal;
     text-decoration: underline;
     white-space: nowrap;
-    margin: 0 0 1rem 0;
 }
 
 .skills-list {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 1.2rem;
+    row-gap: 1rem;
+    column-gap: 1rem;
     padding: 0;
-    margin: 0;
+    margin: -10px;
 }
 
 .skills-container.left .skills-list {
@@ -43,15 +44,15 @@
 }
 
 .skill-item {
-    flex: 0 0 auto;
-    font-size: 1.25rem;
+    font-size: 24px;
     font-family: "League Spartan", sans-serif;
     font-weight: 500;
-    border-radius: 0.5rem;
     text-align: center;
     box-sizing: border-box;
-    white-space: nowrap;
-    /* Remove list-specific styles that are no longer needed */
+    padding: 0.375rem 0.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 
 @media (max-width: 48rem) {

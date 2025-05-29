@@ -1,8 +1,8 @@
 body {
   max-width: 1440px;
-  width: 100%;           /* Ensure responsiveness */
+  width: 100%;
   height: auto;
-  margin: 40px auto;         /* Center the content horizontally */
+  margin: 40px auto;
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -10,28 +10,52 @@ body {
 .skills-component-container {
   margin-top: 40px;
   margin-bottom: 60px;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  flex-wrap: wrap; /* Optional: wrap on smaller screens */
 }
 
 .skills-component-container img.arrow {
-  height: 300px;
-  flex-shrink: 0; /* Prevent image from shrinking */
+  height: auto;
+  width: clamp(100px, 15vw, 200px); /* Responsive width */
+  max-height: 300px;
   z-index: 1;
   animation: pointdown 2s ease-in-out infinite;
+  flex-shrink: 0;
+  order: 0;
+}
+
+/* Add order to the SkillsComponents for mobile control */
+.skills-component-container > :first-child {
+  order: -1; /* Front End component comes first */
+}
+
+.skills-component-container > :last-child {
+  order: 1; /* Back End component comes last */
 }
 
 @media (max-width: 900px) {
   .skills-component-container {
     flex-direction: column;
     gap: 3rem;
+    align-items: center;
   }
 
   .skills-component-container img.arrow {
-    transform: rotate(90deg);
     height: 100px;
+    order: 2; /* Move arrow after both components on mobile */
+  }
+
+  /* Ensure proper order on mobile */
+  .skills-component-container > :first-child {
+    order: 0; /* Front End first */
+  }
+
+  .skills-component-container > :last-child {
+    order: 1; /* Back End second */
   }
 }
 
