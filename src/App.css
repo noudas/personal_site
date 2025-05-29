@@ -65,6 +65,18 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .skills-component-container img.arrow {
+    scale: 0.8;
+  }
+}
+
+@media (max-width: 425px) {
+    .skills-component-container img.arrow {
+    scale: 0.6;
+  }
+}
+
 @keyframes pointdown {
   0% {
     transform: translateY(0);
