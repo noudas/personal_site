@@ -5,8 +5,8 @@ import Projects from './pages/projects/projects'
 function App() {
 
   return (
-    <div className='app'>
-        <Projects />
+    <div className='app'> 
+        <HireMe />
 
     </div>
   )

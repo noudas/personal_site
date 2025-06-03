@@ -10,18 +10,18 @@ const HireMeComponent = () => {
     const [showConfetti, setShowConfetti] = useState(false);
 
     const handleClick = () => {
-        const crowdAudio = new Audio(Crowd);
-        const yayAudio = new Audio(Yay);
-        const victoryAudio = new Audio(Victory);
-        victoryAudio.play();
-        crowdAudio.play();
-        yayAudio.play();
+        // const crowdAudio = new Audio(Crowd);
+        // const yayAudio = new Audio(Yay);
+        // const victoryAudio = new Audio(Victory);
+        // victoryAudio.play();
+        // crowdAudio.play();
+        // yayAudio.play();
         setShowConfetti(true);
 
         // Delay before redirecting to LinkedIn
         setTimeout(() => {
             window.open("https://www.linkedin.com/in/jonathankah/", "_blank");
-        }, 5000); // 1.5 seconds for confetti
+        }, 2000); // 1.5 seconds for confetti
     };
 
     return (

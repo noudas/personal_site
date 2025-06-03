@@ -22,7 +22,7 @@ function HireMe() {
 
   return (
     <div className='hire-me-page'>
-      <TitleComponent />
+      <TitleComponent title={"FULL STACK DEVELOPER"}/>
       <div className='skills-component-container'>
         <SkillsComponent
           direction='left'

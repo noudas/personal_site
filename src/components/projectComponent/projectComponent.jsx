@@ -1,11 +1,10 @@
 import './projectComponent.css';
-import Arrow from '../../assets/ThikkArrow.svg';
+import Arrow from '../../assets/BiggestArrowest.svg';
 
 
-const ProjectComponent = ({ image, title, description, link }) => {
+const ProjectComponent = ({ title, description, link }) => {
   return (
     <div className="project-card">
-      <img src={image} alt={title} className="project-image" />
 
       <div className="project-description">
         <h3>{title}</h3>

@@ -1,11 +1,11 @@
 import "./titleComponent.css"
 
-const TitleComponent = () =>{
+const TitleComponent = ({title}) =>{
     return(
         <>
             <div className="titleComponent">
                 <div className="title">
-                    FULL STACK DEVELOPER
+                    {title}
                 </div>
             </div>
         </>
