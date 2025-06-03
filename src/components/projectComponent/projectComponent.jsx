@@ -1,22 +1,17 @@
 import './projectComponent.css';
 import Arrow from '../../assets/BiggestArrowest.svg';
-import ReactLogo from '../../assets/logos/react.svg';
-import TypescriptLogo from '../../assets/logos/typescript.svg';
-import MongoLogo from '../../assets/logos/mongo.svg';
-import MysqlLogo from '../../assets/logos/mysql.svg';
-import NodeLogo from '../../assets/logos/node.svg';
-import PythonLogo from '../../assets/logos/python.svg';
 
-const techLogos = {
-  react: ReactLogo,
-  node: NodeLogo,
-  mongo: MongoLogo,
-  typescript: TypescriptLogo,
-  mysql: MysqlLogo,
-  python: PythonLogo,
-};
+// 🔁 Auto-import all logos in the logos folder
+const logoModules = import.meta.glob('../../assets/logos/*.svg', { eager: true });
 
-
+const techLogos = {};
+for (const path in logoModules) {
+  const nameMatch = path.match(/\/([^/]+)\.svg$/);
+  if (nameMatch) {
+    const name = nameMatch[1].toLowerCase(); // e.g. 'React' -> 'react'
+    techLogos[name] = logoModules[path].default;
+  }
+}
 
 const ProjectComponent = ({ title, description, link, techs = [] }) => {
   return (
