@@ -1,0 +1,33 @@
+.project-card{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: 33%;
+}
+
+.project-description{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-description h1{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.project-description h2{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.project-description p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}

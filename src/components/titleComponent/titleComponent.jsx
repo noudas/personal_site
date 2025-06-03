@@ -1,9 +1,9 @@
 import "./titleComponent.css"
 
-const TitleComponent = ({title}) =>{
+const TitleComponent = ({title, color}) =>{
     return(
         <>
-            <div className="titleComponent">
+            <div className="titleComponent" style={{ backgroundColor: color }}>
                 <div className="title">
                     {title}
                 </div>
