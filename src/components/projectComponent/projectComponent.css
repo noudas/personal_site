@@ -13,6 +13,7 @@
     max-width: 1200px;
     height: auto;
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .project-description {
@@ -29,17 +30,19 @@
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
+    transition: padding 0.3s ease;
 }
 
-.project-arrow{
+.project-arrow {
     flex: 0.85;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    transition: padding 0.3s ease;
 }
 
-
-.project-techs{
+.project-techs {
     display: flex;
     gap: 10px;
     padding: 0;
@@ -49,14 +52,13 @@
     align-items: center;
 }
 
-.tech-text{
+.tech-text {
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-
-.project-description h4{
+.project-description h4 {
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
@@ -64,7 +66,7 @@
     text-transform: capitalize;
 }
 
-.project-description h2{
+.project-description h2 {
     font-size: 2rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
@@ -72,8 +74,83 @@
     text-transform: capitalize;
 }
 
-.project-description p{
+.project-description p {
     font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 0.5rem;
 }
+
+/* Responsive Styles */
+
+/* Tablets and small desktops */
+@media (max-width: 992px) {
+  .project-card {
+    flex-direction: column;
+    max-width: 80vw;
+    padding: 20px;
+    border-width: 5px;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    box-shadow: 6px 5px 0px black;
+  }
+
+  .project-description {
+    border-width: 4px;
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  .project-description h4 {
+    font-size: 1.6rem; /* smaller */
+    word-break: break-word;
+    hyphens: auto;
+    max-width: 100%;
+  }
+
+  .project-description h1{
+    font-size: 1rem;
+  }
+
+  .project-description h2 {
+    font-size: 1.5rem; /* smaller */
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  .project-description p {
+    font-size: 0.9rem; /* smaller */
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  .tech-text {
+    font-size: 0.9rem; /* smaller */
+  }
+
+  .project-techs {
+    justify-content: center;
+    flex-wrap: wrap; /* allow wrap if too many techs */
+  }
+
+  .project-arrow {
+    flex: none;
+    transform: rotate(90deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-arrow img {
+    width: 60px;
+    height: 60px;
+  }
+}
+

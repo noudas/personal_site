@@ -10,4 +10,18 @@
     --azul: #303AF2;
     --azulClaro: #50C3ED;
     --azulMarinho: #059387;
+
+    /* Pastel Palette */
+    --pastel-pink: #f9c5d1;
+    --pastel-peach: #fcd5ce;
+    --pastel-yellow: #fae1dd;
+    --pastel-mint: #bee1e6;
+    --pastel-lavender: #c1bee8;
+    --pastel-sky: #a3cef1;
+    --pastel-lime: #d9f0d9;
+    --pastel-coral: #ffb3ab;
+    --pastel-teal: #98d5e1;
+    --pastel-gold: #f7d8a6;
+    --pastel-plum: #b299bc;
+    --pastel-rose: #f2c6c2;
 }
