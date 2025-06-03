@@ -36,7 +36,7 @@ const HireMeComponent = () => {
 
     return (
         <>
-            {showConfetti && <Confetti initialVelocityX={30} gravity={0.3} tweenDuration={2000} numberOfPieces={confettiPieces}/>}
+            {showConfetti && <Confetti initialVelocityX={30} gravity={0.2} tweenDuration={2000} numberOfPieces={confettiPieces}/>}
             <div className="HireMeComponent" onClick={handleClick} style={{ cursor: "pointer" }}>
                 <div className="hireme">
                     HIRE ME!
