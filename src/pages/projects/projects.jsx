@@ -84,26 +84,36 @@ const Projects = () => {
 
       const raw = await res.json();
 
+      // SORT repos by updated_at descending (most recent first)
       const sorted = raw.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
 
       const excludedTechs = ["batchfile", "assembly", "plpgsql", "cython"];
+
+      const maxReadmeLength = 100; // max chars for README snippet
 
       const enriched = await Promise.all(
         sorted.map(async (repo) => {
           const langList = await fetchLanguages(repo.languages_url);
           const detectedFromText = detectTechsFromText(repo.description || repo.name || "");
 
-          // Fetch README content
           const readmeContent = await fetchReadme(repo.owner.login, repo.name);
 
-          // Build description string
+          // Trim README content to snippet
+          let readmeSnippet = "";
+          if (readmeContent) {
+            readmeSnippet =
+              readmeContent.length > maxReadmeLength
+                ? readmeContent.slice(0, maxReadmeLength) + "..."
+                : readmeContent;
+          }
+
           let descriptionCombined = "";
-          if (repo.description && readmeContent) {
-            descriptionCombined = repo.description + "\n\n" + readmeContent;
+          if (repo.description && readmeSnippet) {
+            descriptionCombined = repo.description + "\n\n" + readmeSnippet;
           } else if (repo.description) {
             descriptionCombined = repo.description;
-          } else if (readmeContent) {
-            descriptionCombined = readmeContent;
+          } else if (readmeSnippet) {
+            descriptionCombined = readmeSnippet;
           } else {
             descriptionCombined = "No description provided.";
           }
