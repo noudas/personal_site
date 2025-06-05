@@ -1,3 +1,5 @@
+@import url('../../components/colors.css');
+
 /* HireMe.css */
 
 body {
@@ -38,6 +40,36 @@ body {
 }
 .skills-component-container > :last-child {
   order: 1;
+}
+
+.arrowNext {
+  width: 60px;
+}
+
+.pageButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 1rem;
+  font-size: 1.8rem;
+  background-color: var(--pastel-lavender);
+  border: 4px solid;
+  box-shadow: 6px 5px 0px black;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.pages {
+
+  margin-top: -100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 @media (max-width: 900px) {
