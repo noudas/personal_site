@@ -140,5 +140,8 @@
 @media (max-width: 480px) {
     .titleComponent {
         padding: 0.75rem;
+        width: 80%;
+        margin-right: 14px;
     }
+
 }

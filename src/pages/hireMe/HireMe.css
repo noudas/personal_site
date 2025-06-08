@@ -1,11 +1,12 @@
 @import url('../../components/colors.css');
 
-/* HireMe.css */
+/* HireMe.css - Improved Responsive Version */
 
 body {
   max-width: 1440px;
   height: auto;
   margin: 40px auto;
+  padding: 0 20px; /* Add horizontal padding for smaller screens */
   box-sizing: border-box;
 }
 
@@ -18,17 +19,19 @@ body {
 }
 
 .skills-component-container {
-  margin-top: 40px;
-  margin-bottom: 60px;
+  margin-top: clamp(20px, 5vw, 40px); /* Responsive margin */
+  margin-bottom: clamp(30px, 8vw, 60px);
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
+  align-items: center; /* Better alignment */
+  gap: clamp(10px, 3vw, 30px); /* Responsive gap */
 }
 
 .skills-component-container img.arrow {
   height: auto;
-  width: clamp(100px, 15vw, 200px);
-  max-height: 300px;
+  width: clamp(80px, 12vw, 200px); /* More responsive sizing */
+  max-height: clamp(200px, 25vw, 300px);
   z-index: 1;
   animation: pointdown 2s ease-in-out infinite;
   flex-shrink: 0;
@@ -38,12 +41,13 @@ body {
 .skills-component-container > :first-child {
   order: -1;
 }
+
 .skills-component-container > :last-child {
   order: 1;
 }
 
 .arrowNext {
-  width: 60px;
+  width: clamp(40px, 8vw, 60px); /* Responsive width */
 }
 
 .pageButton {
@@ -51,9 +55,9 @@ body {
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  gap: 1rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.5rem;
+  gap: clamp(0.5rem, 2vw, 1rem);
+  padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1.1rem, 3vw, 1.5rem); /* Responsive font size */
   font-weight: 600;
   color: black;
   background-color: var(--pastel-lavender);
@@ -64,10 +68,11 @@ body {
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   user-select: none;
+  min-height: 44px; /* Accessibility - minimum touch target */
 }
 
 .pageButton:hover {
-  background-color: var(--pastel-purple); /* Consider adding a slightly deeper pastel */
+  background-color: var(--pastel-purple);
   transform: translateY(-2px);
   box-shadow: 6px 6px 0px black;
 }
@@ -79,32 +84,58 @@ body {
 
 .pageButton:focus {
   outline: none;
-  box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.4); /* Accessible focus ring */
+  box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.4);
 }
 
 .pages {
-  margin-top: -100px;
+  margin-top: clamp(-60px, -10vw, -100px); /* Responsive negative margin */
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: clamp(10px, 3vw, 20px);
 }
 
+@media (max-width: 1360) {
+  body {
+    margin: 30px auto;
+    padding: 0 20px; /* Consistent padding */
+  }
+
+  .skills-component-container {
+    gap: 3rem; /* More space for larger screens */
+  }
+  
+}
+
+/* Tablet and small desktop */
+@media (max-width: 1024px) {
+  body {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+  
+  .skills-component-container {
+    gap: 2rem;
+  }
+}
+
+/* Large mobile and small tablet */
 @media (max-width: 900px) {
   body {
-    width: 80%;
+    width: 90%; /* More space utilization */
+    padding: 0 10px;
   }
 
   .skills-component-container {
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
   }
 
   .skills-component-container img.arrow {
-    height: 100px;
+    width: clamp(80px, 20vw, 120px);
     order: 2;
   }
 
@@ -115,21 +146,131 @@ body {
   .skills-component-container > :last-child {
     order: 1;
   }
-  .pageButton{
-    transform: scale(0.8);
-    width: 100%;
+
+  .pages {
+    gap: 1rem;
+    margin-top: -50px;
+  }
+
+  .pageButton {
+    flex: 1;
+    max-width: 200px; /* Prevent buttons from becoming too wide */
+    border-radius: 30px;
   }
 }
 
+/* Standard mobile devices */
 @media (max-width: 768px) {
+  body {
+    margin: 15px auto;
+    text-align: center; /* Center align text content including titles */
+  }
+
+  .hire-me-page {
+    min-height: calc(100vh - 200px);
+  }
+
   .skills-component-container img.arrow {
-    scale: 0.8;
+    width: clamp(70px, 18vw, 100px);
+  }
+
+  .pageButton {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
   }
 }
 
-@media (max-width: 425px) {
+/* Small mobile devices */
+@media (max-width: 480px) {
+  body {
+    width: 95%;
+    margin: 10px auto;
+    padding: 0 5px;
+    text-align: center; /* Center align text content including titles */
+    margin-bottom: 20px;
+  }
+
+  .skills-component-container {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    gap: 1.5rem;
+  }
+
   .skills-component-container img.arrow {
-    scale: 0.6;
+    width: clamp(60px, 15vw, 80px);
+  }
+
+  .pageButton {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 0.5rem;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 100px;
+  }
+
+  .pages {
+    margin-top: -30px;
+    gap: 0.8rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+  .skills-component-container img.arrow {
+    width: 50px;
+  }
+
+  .pageButton {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+  .hire-me-page {
+    min-height: calc(100vh - 100px);
+  }
+  
+  .skills-component-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .pages {
+    margin-top: -40px;
+  }
+}
+
+/* Hover effects only on devices that support it */
+@media (hover: hover) {
+  .pageButton:hover {
+    background-color: var(--pastel-purple);
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0px black;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .skills-component-container img.arrow {
+    animation: none;
+  }
+  
+  .pageButton {
+    transition: none;
+  }
+  
+  .pageButton:hover {
+    transform: none;
+  }
+  
+  .pageButton:active {
+    transform: none;
   }
 }
 
