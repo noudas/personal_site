@@ -42,7 +42,7 @@ function HireMe() {
           <a>
             <img src={NextArrow} alt='Arrow' className='arrow arrowNext' style={{rotate:'180deg '}} />
           </a>
-          <h3>Under Construction</h3>
+          <h3>About Me</h3>
         </div>
         <div className='pageButton' onClick={() => window.location.href = '/projects'}>
           <h3>Projects</h3>
