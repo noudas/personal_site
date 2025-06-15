@@ -1,0 +1,16 @@
+.about-container{
+  display: flex;
+  flex-direction: row;
+  padding: 25px;
+  background-color: antiquewhite;
+  box-shadow: 6px 6px 0px black;
+  border: 3px solid black;
+  gap: 20px;
+}
+
+h2{
+  font-size: 40px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-transform: uppercase;
+}

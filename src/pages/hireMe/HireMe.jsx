@@ -30,7 +30,7 @@ function HireMe() {
           title='Front End'
           skills={['REACT', 'TYPESCRIPT', 'JAVASCRIPT', 'HTML', 'CSS', 'TAILWIND', 'BOOTSTRAP']}
         />
-        <img src={isMobile ? ThikkArrow : Arrow} alt='Arrow' className='arrow' />
+        <img src={isMobile ? ThikkArrow : Arrow} alt='Arrow' className='arrow'/>
         <SkillsComponent
           direction='right'
           title='Back End'
@@ -40,7 +40,7 @@ function HireMe() {
       <div className='pages'>
         <div className='pageButton'>
           <a>
-            <img src={NextArrow} alt='Arrow' className='arrow arrowNext' style={{rotate:'180deg '}} />
+            <img src={NextArrow} alt='Arrow' className='arrow arrowNext' style={{rotate:'180deg '}} onClick={() => window.location.href = '/about'} />
           </a>
           <h3>About Me</h3>
         </div>
