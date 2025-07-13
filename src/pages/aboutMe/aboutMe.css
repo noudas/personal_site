@@ -1,16 +1,333 @@
-.about-container{
+/* Main container - postal card style */
+.about-container {
   display: flex;
   flex-direction: row;
-  padding: 25px;
-  background-color: antiquewhite;
-  box-shadow: 6px 6px 0px black;
-  border: 3px solid black;
-  gap: 20px;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #faebd7 0%, #f5f5dc 100%);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid #d4b895;
+  border-radius: 12px;
+  gap: 40px;
+  position: relative;
 }
 
-h2{
-  font-size: 40px;
-  font-weight: 700;
-  text-decoration: underline;
+/* Postal card decorative elements */
+.about-container::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 40px;
+  background: repeating-linear-gradient(
+    45deg,
+    #e74c3c,
+    #e74c3c 4px,
+    #fff 4px,
+    #fff 8px
+  );
+  border: 2px solid #c0392b;
+  border-radius: 4px;
+}
+
+.about-container::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 80px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    #3498db 0,
+    #3498db 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+/* Profile image styling - like a postal card photo */
+.about-container > img {
+  width: 220px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.15),
+    0 0 0 4px #fff,
+    0 0 0 6px #ddd;
+  flex-shrink: 0;
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+.about-container > img:hover {
+  transform: rotate(0deg);
+}
+
+/* Content wrapper - flowing text style */
+.about-content {
+  flex: 1;
+  min-width: 0;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Name styling - handwritten feel */
+.about-content h2 {
+  font-family: 'Brush Script MT', cursive, serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #2c3e50;
+  margin: 0 0 20px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transform: rotate(-1deg);
+}
+
+/* Description paragraph - personal message style */
+.about-content > p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #34495e;
+  margin-bottom: 0;
+  font-style: italic;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  border-left: 4px solid #f39c12;
+  backdrop-filter: blur(5px);
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about-content > p::before {
+  content: '💭';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+}
+
+/* Section styling - better divided sections */
+.about-content section {
+  margin-bottom: 0;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: none;
+  position: relative;
+  backdrop-filter: blur(5px);
+  border-left: 4px solid var(--pastel-teal, #4ecdc4);
+}
+
+.about-content section:nth-child(even) {
+  background: rgba(240, 248, 255, 0.3);
+  border-left-color: #e74c3c;
+  transform: translateX(10px);
+}
+
+.about-content section:nth-child(odd) {
+  transform: translateX(-5px);
+}
+
+.about-content section::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.about-content section h3 {
+  color: #e74c3c;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.about-content section h3::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--pastel-teal, #4ecdc4);
+}
+
+/* Flowing text layout - no obvious lists */
+.about-content section > p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #34495e;
+}
+
+.about-content section > p:last-child {
+  margin-bottom: 0;
+}
+
+/* Transform lists into flowing text with better separation */
+.about-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.about-content li {
+  display: inline-block;
+  color: #34495e;
+  font-size: 15px;
+  margin-right: 8px;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.about-content li:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+.about-content li::after {
+  display: none;
+}
+
+/* Academic background special styling */
+.about-content section:nth-of-type(1) {
+  border-left-color: #9b59b6;
+}
+
+.about-content section:nth-of-type(1) h3 {
+  background: linear-gradient(90deg, #9b59b6, rgba(155, 89, 182, 0.1));
+}
+
+.about-content section:nth-of-type(1) p::before {
+  content: "🎓";
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* Languages section styling */
+.about-content section:nth-of-type(2) {
+  border-left-color: #27ae60;
+}
+
+.about-content section:nth-of-type(2) h3 {
+  background: linear-gradient(90deg, #27ae60, rgba(39, 174, 96, 0.1));
+}
+
+.about-content section:nth-of-type(2) li::before {
+  content: "🌍 ";
+  margin-right: 5px;
+}
+
+/* Certifications section styling */
+.about-content section:nth-of-type(3) {
+  border-left-color: #f39c12;
+}
+
+.about-content section:nth-of-type(3) h3 {
+  background: linear-gradient(90deg, #f39c12, rgba(243, 156, 18, 0.1));
+}
+
+.about-content section:nth-of-type(3) p::before {
+  content: "🏅";
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* Personal interests section styling */
+.about-content section:nth-of-type(4) {
+  border-left-color: #e91e63;
+}
+
+.about-content section:nth-of-type(4) h3 {
+  background: linear-gradient(90deg, #e91e63, rgba(233, 30, 99, 0.1));
+}
+
+.about-content section:nth-of-type(4) li::before {
+  content: "✨ ";
+  margin-right: 5px;
+}
+
+/* Link styling - subtle and integrated */
+.about-content a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px dotted #3498db;
+  transition: all 0.3s ease;
+}
+
+.about-content a:hover {
+  color: #2980b9;
+  border-bottom-style: solid;
+}
+
+/* Personal interests with emoji integration */
+.about-content section:nth-of-type(4) ul {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  border-left: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    gap: 25px;
+  }
+  
+  .about-container > img {
+    width: 180px;
+    height: 220px;
+    transform: rotate(0deg);
+  }
+  
+  .about-content {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .about-content h2 {
+    font-size: 36px;
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 20px 15px;
+    margin: 10px;
+  }
+  
+  .about-container > img {
+    width: 150px;
+    height: 180px;
+  }
+  
+  .about-content h2 {
+    font-size: 32px;
+  }
 }
