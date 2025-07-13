@@ -1,4 +1,5 @@
-@import "../../components/colors.css";
+/* Import colors */
+@import './../../components/colors.css';
 
 /* Main container - postal card style */
 .about-container {
@@ -8,11 +9,11 @@
   max-width: 900px;
   margin: 20px auto;
   padding: 40px;
-  background: linear-gradient(135deg, #faebd7 0%, #f5f5dc 100%);
+  background: linear-gradient(135deg, var(--card-cream) 0%, var(--card-beige) 100%);
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 8px 32px var(--card-shadow),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  border: 1px solid #d4b895;
+  border: 1px solid var(--card-border-light);
   border-radius: 12px;
   gap: 40px;
   position: relative;
@@ -28,12 +29,12 @@
   height: 40px;
   background: repeating-linear-gradient(
     45deg,
-    #e74c3c,
-    #e74c3c 4px,
+    var(--card-stamp-red),
+    var(--card-stamp-red) 4px,
     #fff 4px,
     #fff 8px
   );
-  border: 2px solid #c0392b;
+  border: 2px solid var(--card-stamp-dark);
   border-radius: 4px;
 }
 
@@ -46,8 +47,8 @@
   height: 2px;
   background: repeating-linear-gradient(
     90deg,
-    #3498db 0,
-    #3498db 10px,
+    var(--card-postal-blue) 0,
+    var(--card-postal-blue) 10px,
     transparent 10px,
     transparent 20px
   );
@@ -87,9 +88,9 @@
   font-family: 'Brush Script MT', cursive, serif;
   font-size: 42px;
   font-weight: 400;
-  color: #2c3e50;
+  color: var(--card-text-dark);
   margin: 0 0 20px 0;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 2px var(--card-shadow);
   transform: rotate(-1deg);
 }
 
@@ -97,13 +98,13 @@
 .about-content > p {
   font-size: 16px;
   line-height: 1.7;
-  color: #34495e;
+  color: var(--card-text-medium);
   margin-bottom: 0;
   font-style: italic;
   padding: 20px;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
-  border-left: 4px solid #f39c12;
+  border-left: 4px solid var(--section-certifications);
   backdrop-filter: blur(5px);
   position: relative;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -120,19 +121,19 @@
 /* Section styling - better divided sections */
 .about-content section {
   margin-bottom: 0;
-  background: rgba(255, 255, 255, 0.4);
+  background: var(--card-overlay);
   padding: 20px;
   border-radius: 10px;
   border: none;
   box-shadow: none;
   position: relative;
   backdrop-filter: blur(5px);
-  border-left: 4px solid var(--pastel-teal, #4ecdc4);
+  border-left: 4px solid var(--pastel-teal);
 }
 
 .about-content section:nth-child(even) {
-  background: rgba(240, 248, 255, 0.3);
-  border-left-color: #e74c3c;
+  background: var(--card-overlay-alt);
+  border-left-color: var(--card-stamp-red);
   transform: translateX(10px);
 }
 
@@ -147,7 +148,7 @@
   left: -5px;
   right: -5px;
   bottom: -5px;
-  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(45deg, transparent, var(--gradient-light), transparent);
   border-radius: 12px;
   z-index: -1;
 }
@@ -212,62 +213,99 @@
   display: none;
 }
 
-/* Academic background special styling */
+/* Specific section styling with themed colors */
+/* Professional Experience */
 .about-content section:nth-of-type(1) {
-  border-left-color: #9b59b6;
+  border-left-color: var(--section-experience);
 }
 
 .about-content section:nth-of-type(1) h3 {
-  background: linear-gradient(90deg, #9b59b6, rgba(155, 89, 182, 0.1));
+  background: linear-gradient(90deg, var(--section-experience), rgba(52, 73, 94, 0.1));
 }
 
-.about-content section:nth-of-type(1) p::before {
+/* Technical Skills */
+.about-content section:nth-of-type(2) {
+  border-left-color: var(--section-skills);
+}
+
+.about-content section:nth-of-type(2) h3 {
+  background: linear-gradient(90deg, var(--section-skills), rgba(22, 160, 133, 0.1));
+}
+
+/* Academic Background */
+.about-content section:nth-of-type(3) {
+  border-left-color: var(--section-academic);
+}
+
+.about-content section:nth-of-type(3) h3 {
+  background: linear-gradient(90deg, var(--section-academic), rgba(155, 89, 182, 0.1));
+}
+
+.about-content section:nth-of-type(3) p::before {
   content: "🎓";
   margin-right: 8px;
   font-size: 16px;
 }
 
-/* Languages section styling */
-.about-content section:nth-of-type(2) {
-  border-left-color: #27ae60;
+/* Languages section */
+.about-content section:nth-of-type(4) {
+  border-left-color: var(--section-languages);
 }
 
-.about-content section:nth-of-type(2) h3 {
-  background: linear-gradient(90deg, #27ae60, rgba(39, 174, 96, 0.1));
+.about-content section:nth-of-type(4) h3 {
+  background: linear-gradient(90deg, var(--section-languages), rgba(39, 174, 96, 0.1));
 }
 
-.about-content section:nth-of-type(2) li::before {
+.about-content section:nth-of-type(4) li::before {
   content: "🌍 ";
   margin-right: 5px;
 }
 
-/* Certifications section styling */
-.about-content section:nth-of-type(3) {
-  border-left-color: #f39c12;
+/* Certifications */
+.about-content section:nth-of-type(5) {
+  border-left-color: var(--section-certifications);
 }
 
-.about-content section:nth-of-type(3) h3 {
-  background: linear-gradient(90deg, #f39c12, rgba(243, 156, 18, 0.1));
+.about-content section:nth-of-type(5) h3 {
+  background: linear-gradient(90deg, var(--section-certifications), rgba(243, 156, 18, 0.1));
 }
 
-.about-content section:nth-of-type(3) p::before {
+.about-content section:nth-of-type(5) p::before {
   content: "🏅";
   margin-right: 8px;
   font-size: 16px;
 }
 
-/* Personal interests section styling */
-.about-content section:nth-of-type(4) {
-  border-left-color: #e91e63;
+/* Featured Projects */
+.about-content section:nth-of-type(6) {
+  border-left-color: var(--section-projects);
 }
 
-.about-content section:nth-of-type(4) h3 {
-  background: linear-gradient(90deg, #e91e63, rgba(233, 30, 99, 0.1));
+.about-content section:nth-of-type(6) h3 {
+  background: linear-gradient(90deg, var(--section-projects), rgba(142, 68, 173, 0.1));
 }
 
-.about-content section:nth-of-type(4) li::before {
+/* Personal Interests */
+.about-content section:nth-of-type(7) {
+  border-left-color: var(--section-interests);
+}
+
+.about-content section:nth-of-type(7) h3 {
+  background: linear-gradient(90deg, var(--section-interests), rgba(233, 30, 99, 0.1));
+}
+
+.about-content section:nth-of-type(7) li::before {
   content: "✨ ";
   margin-right: 5px;
+}
+
+/* Contact & Connect */
+.about-content section:nth-of-type(8) {
+  border-left-color: var(--section-contact);
+}
+
+.about-content section:nth-of-type(8) h3 {
+  background: linear-gradient(90deg, var(--section-contact), rgba(230, 126, 34, 0.1));
 }
 
 /* Link styling - subtle and integrated */
