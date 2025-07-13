@@ -83,26 +83,26 @@
   gap: 25px;
 }
 
-/* Name styling - handwritten feel */
+/* Name styling - handwritten feel with better contrast */
 .about-content h2 {
   font-family: 'Brush Script MT', cursive, serif;
-  font-size: 42px;
+  font-size: clamp(28px, 5vw, 42px);
   font-weight: 400;
-  color: var(--card-text-dark);
+  color: #2c3e50; /* Darker color for better contrast */
   margin: 0 0 20px 0;
-  text-shadow: 1px 1px 2px var(--card-shadow);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   transform: rotate(-1deg);
 }
 
-/* Description paragraph - personal message style */
+/* Description paragraph - personal message style with better readability */
 .about-content > p {
-  font-size: 16px;
+  font-size: clamp(14px, 2.5vw, 16px);
   line-height: 1.7;
-  color: var(--card-text-medium);
+  color: #34495e; /* Darker color for better contrast */
   margin-bottom: 0;
   font-style: italic;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8); /* More opaque background */
   border-radius: 10px;
   border-left: 4px solid var(--section-certifications);
   backdrop-filter: blur(5px);
@@ -113,26 +113,26 @@
 .about-content > p::before {
   content: '💭';
   position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 20px;
+  top: 5px;
+  right: 5px;
+  font-size: 16px;
 }
 
-/* Section styling - better divided sections */
+/* Section styling - better divided sections with improved contrast */
 .about-content section {
   margin-bottom: 0;
-  background: var(--card-overlay);
+  background: rgba(255, 255, 255, 0.9); /* More opaque for better readability */
   padding: 20px;
   border-radius: 10px;
   border: none;
-  box-shadow: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   backdrop-filter: blur(5px);
   border-left: 4px solid var(--pastel-teal);
 }
 
 .about-content section:nth-child(even) {
-  background: var(--card-overlay-alt);
+  background: rgba(248, 249, 250, 0.9);
   border-left-color: var(--card-stamp-red);
   transform: translateX(10px);
 }
@@ -154,9 +154,9 @@
 }
 
 .about-content section h3 {
-  color: #e74c3c;
+  color: #c0392b; /* Darker red for better contrast */
   margin-bottom: 8px;
-  font-size: 18px;
+  font-size: clamp(16px, 3vw, 18px);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -173,18 +173,19 @@
   background: var(--pastel-teal, #4ecdc4);
 }
 
-/* Flowing text layout - no obvious lists */
+/* Flowing text layout - no obvious lists with better contrast */
 .about-content section > p {
   margin-bottom: 12px;
   line-height: 1.6;
-  color: #34495e;
+  color: #2c3e50; /* Darker color for better readability */
+  font-size: clamp(14px, 2.5vw, 15px);
 }
 
 .about-content section > p:last-child {
   margin-bottom: 0;
 }
 
-/* Transform lists into flowing text with better separation */
+/* Transform lists into flowing text with better separation and readability */
 .about-content ul {
   list-style: none;
   padding: 0;
@@ -194,19 +195,21 @@
 
 .about-content li {
   display: inline-block;
-  color: #34495e;
-  font-size: 15px;
+  color: #2c3e50; /* Darker color for better contrast */
+  font-size: clamp(13px, 2.5vw, 15px);
   margin-right: 8px;
-  padding: 4px 8px;
-  background: rgba(255, 255, 255, 0.5);
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.8); /* More opaque background */
   border-radius: 15px;
   margin-bottom: 8px;
   transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .about-content li:hover {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.95);
   transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .about-content li::after {
@@ -308,17 +311,17 @@
   background: linear-gradient(90deg, var(--section-contact), rgba(230, 126, 34, 0.1));
 }
 
-/* Link styling - subtle and integrated */
+/* Link styling - subtle and integrated with better contrast */
 .about-content a {
-  color: #3498db;
+  color: #2980b9; /* Darker blue for better contrast */
   text-decoration: none;
   font-weight: 500;
-  border-bottom: 1px dotted #3498db;
+  border-bottom: 1px dotted #2980b9;
   transition: all 0.3s ease;
 }
 
 .about-content a:hover {
-  color: #2980b9;
+  color: #1f618d;
   border-bottom-style: solid;
 }
 
@@ -330,13 +333,27 @@
   border-left: none;
 }
 
-/* Responsive design */
+/* Enhanced responsive design */
+@media (max-width: 1024px) {
+  .about-container {
+    max-width: 800px;
+    gap: 30px;
+    padding: 35px;
+  }
+  
+  .about-container > img {
+    width: 200px;
+    height: 250px;
+  }
+}
+
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
     align-items: center;
     padding: 30px 20px;
     gap: 25px;
+    margin: 15px;
   }
   
   .about-container > img {
@@ -347,12 +364,32 @@
   
   .about-content {
     width: 100%;
-    text-align: center;
+    text-align: left; /* Changed from center for better readability */
   }
   
   .about-content h2 {
-    font-size: 36px;
+    text-align: center;
     transform: rotate(0deg);
+  }
+  
+  /* Remove transforms on mobile for better layout */
+  .about-content section:nth-child(even),
+  .about-content section:nth-child(odd) {
+    transform: none;
+  }
+  
+  /* Adjust decorative elements for mobile */
+  .about-container::before {
+    width: 50px;
+    height: 35px;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .about-container::after {
+    width: 60px;
+    bottom: 15px;
+    left: 15px;
   }
 }
 
@@ -367,7 +404,43 @@
     height: 180px;
   }
   
-  .about-content h2 {
-    font-size: 32px;
+  .about-content {
+    gap: 20px;
   }
+  
+  .about-content section {
+    padding: 15px;
+  }
+  
+  .about-content li {
+    margin-right: 6px;
+    margin-bottom: 6px;
+    padding: 4px 8px;
+  }
+  
+  /* Hide decorative elements on very small screens */
+  .about-container::before,
+  .about-container::after {
+    display: none;
+  }
+}
+
+/* Improved accessibility and focus states */
+.about-content a:focus,
+.about-content li:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* Better hover states for touch devices */
+@media (hover: hover) {
+  .about-content li:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-2px);
+  }
+}
+
+/* Ensure text remains readable on all backgrounds */
+.about-content section > p strong {
+  color: #1a252f; /* Even darker for emphasis */
 }
