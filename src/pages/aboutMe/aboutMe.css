@@ -1,3 +1,5 @@
+@import "../../components/colors.css";
+
 /* Main container - postal card style */
 .about-container {
   display: flex;

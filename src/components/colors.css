@@ -24,4 +24,33 @@
     --pastel-gold: #f7d8a6;
     --pastel-plum: #b299bc;
     --pastel-rose: #f2c6c2;
+
+    /* Postal Card Theme Colors */
+    --card-cream: #faebd7;
+    --card-beige: #f5f5dc;
+    --card-stamp-red: #e74c3c;
+    --card-stamp-dark: #c0392b;
+    --card-postal-blue: #3498db;
+    --card-text-dark: #2c3e50;
+    --card-text-medium: #34495e;
+    --card-border-light: #d4b895;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --card-overlay: rgba(255, 255, 255, 0.4);
+    --card-overlay-alt: rgba(240, 248, 255, 0.3);
+    
+    /* Section Theme Colors */
+    --section-academic: #9b59b6;
+    --section-languages: #27ae60;
+    --section-certifications: #f39c12;
+    --section-interests: #e91e63;
+    --section-experience: #34495e;
+    --section-skills: #16a085;
+    --section-projects: #8e44ad;
+    --section-contact: #e67e22;
+    
+    /* Interactive Colors */
+    --hover-lift: rgba(255, 255, 255, 0.8);
+    --link-blue: #3498db;
+    --link-blue-hover: #2980b9;
+    --gradient-light: rgba(255, 255, 255, 0.1);
 }
