@@ -17,6 +17,15 @@ function UXProjects() {
             flavorText={"10/10 would bank again"}
             learnMoreText={"Learn More"}
           />
+          <UXProjectCard 
+            title={"SynbioBr"}
+            image={"https://pbs.twimg.com/profile_images/1403505434984599564/nZ1nC44i_400x400.jpg"}
+            typeLine={"Investment & News Site for Biotech"}
+            description={"Designed a platform for young scientists (16–27) and biotech investors (50–75), blending accessibility with depth. Led UX research (empathy maps, user flows, usability tests) and created a full UI system tailored to both scientific and investor audiences."}
+            link={"https://www.figma.com/design/FX37nxtna5fMDNORWObDXh/Synbio-Backup?m=auto&t=naP1KD4IF9oyGIdf-6"}
+            flavorText={"Ha! Gordon!"}
+            learnMoreText={"Learn More"}
+          />
         </div>
     </div>
   );
