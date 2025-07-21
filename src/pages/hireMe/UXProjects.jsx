@@ -26,6 +26,15 @@ function UXProjects() {
             flavorText={"Ha! Gordon!"}
             learnMoreText={"Learn More"}
           />
+          <UXProjectCard 
+            title={"WeOnne"}
+            image={"https://media.licdn.com/dms/image/v2/C4E0BAQEUAxaIiCCw9Q/company-logo_200_200/company-logo_200_200/0/1638473018059/agenciaweonne_logo?e=2147483647&v=beta&t=FGtSfT_8zPJqOVUes-o8KPSx9hDLxwny1qJ-JWaiUwM"}
+            typeLine={"Ecommerce Building Platform"}
+            description={"Led end-to-end UX/UI design for a VTEX-based e-commerce solution. Responsible for planning, sitemaps, user flows, personas, wireframes, and high-fidelity interfaces—creating a seamless and scalable shopping experience."}
+            link={"https://www.figma.com/design/MObsQfJZrbegPdntmcCxZq/Trabalhos-Figma-1-Weonne?node-id=0-1&t=D21HsM1wHgd4hR8Q-1"}
+            flavorText={"Bombs? Lamp oil?"}
+            learnMoreText={"Learn More"}
+          />
         </div>
     </div>
   );
