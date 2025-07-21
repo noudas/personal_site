@@ -1,4 +1,3 @@
-// HireMe.jsx
 import { useEffect, useState } from 'react'
 import './HireMe.css'
 import SkillsComponent from '../../components/skillsComponent/skillsComponent'
@@ -6,7 +5,6 @@ import TitleComponent from '../../components/titleComponent/titleComponent'
 import Arrow from '../../assets/Arrow.svg'
 import ThikkArrow from '../../assets/ThikkArrow.svg'
 import NextArrow from '../../assets/BiggestArrowest.svg'
-import HireMeComponent from '../../components/hireMeComponent/hireMeComponent'
 
 function HireMe() {
   const [isMobile, setIsMobile] = useState(false)
@@ -23,37 +21,32 @@ function HireMe() {
 
   return (
     <div className='hire-me-page'>
-      <TitleComponent title={"FULL STACK DEVELOPER"} color={'var(--verde)'}/>
+      <TitleComponent title={"JONATHAN KAHAN"} color={'var(--verde)'}/>
       <div className='skills-component-container'>
-        <SkillsComponent
-          direction='left'
-          title='Front End'
-          skills={['REACT', 'TYPESCRIPT', 'JAVASCRIPT', 'HTML', 'CSS', 'TAILWIND', 'BOOTSTRAP']}
-        />
-        <img src={isMobile ? ThikkArrow : Arrow} alt='Arrow' className='arrow'/>
-        <SkillsComponent
-          direction='right'
-          title='Back End'
-          skills={['PHP', 'SQL', 'POSTGRES', 'PYTHON', 'NODE', 'KOTLIN', 'UML', 'MONGODB', 'EXPRESS']}
-        />
-      </div>
-      <div className='pages'>
-        <div className='pageButton' onClick={() => window.location.href = '/about'}>
-          <a>
-            <img src={NextArrow} alt='Arrow' className='arrow arrowNext' style={{rotate:'180deg '}} onClick={() => window.location.href = '/about'} />
-          </a>
-          <h3>About Me</h3>
+        <div className="hireme-landing-choice hireme-landing-choice-fullstack" onClick={() => window.location.href = '/hireme-fullstack'}>
+          
+            <a>
+              <img src={NextArrow} alt='Arrow' className='arrow arrowNext' style={{rotate:'180deg '}} onClick={() => window.location.href = '/about'} />
+            </a>
+            <SkillsComponent
+            direction='left'
+            title='Fullstack Developer'
+          />
         </div>
-        <div className='pageButton' onClick={() => window.location.href = '/projects'}>
-          <h3>Projects</h3>
+        <div className="hireme-landing-choice hireme-landing-choice-uxui"
+         onClick={() => window.location.href = '/hireme-uxui'}>
+          <SkillsComponent
+            direction='right'
+            title='UX/UI Designer'
+          />
+
           <a>
             <img src={NextArrow} alt='Arrow' className='arrow arrowNext' />
           </a>
         </div>
       </div>
-      <HireMeComponent />
     </div>
   )
 }
 
-export default HireMe
+export default HireMe 

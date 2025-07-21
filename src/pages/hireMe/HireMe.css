@@ -50,6 +50,52 @@ body {
   width: clamp(40px, 8vw, 60px); /* Responsive width */
 }
 
+.hireme-landing-choice {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  padding: 0.5rem;
+  border: 3px solid black;
+  box-shadow: 4px 4px 0px black;
+  border-radius: 30px;
+  cursor: pointer;
+  min-height: 44px; /* Accessibility - minimum touch target */
+  transition: all 0.2s ease-in-out;
+}
+
+.hireme-landing-choice .skills-title{
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.hireme-landing-choice:hover {
+  transform: translateY(-5px);
+  background-color: var(--pastel-peach);
+}
+
+.hireme-landing-choice img.arrow{
+  width: clamp(90px, 8vw, 60px);
+  animation: none;
+}
+
+.hireme-landing-choice-fullstack{
+  background-color: var(--pastel-plum);
+}
+
+.hireme-landing-choice-uxui{
+  background-color: var(--pastel-mint);
+}
+
+.ux-projects-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+
 .pageButton {
   display: inline-flex;
   align-items: center;
@@ -284,4 +330,9 @@ body {
   100% {
     transform: translateY(0);
   }
+}
+
+.body-hireme-hover {
+  background-color: var(--pastel-peach); /* Or any color you want */
+  transition: background-color 0.3s ease-in-out;
 }

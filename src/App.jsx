@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HireMe from './pages/hireMe/HireMe';
 import Projects from './pages/projects/projects';
 import AboutMe from './pages/aboutMe/aboutMe';
+import HireMeUXUI from './pages/hireMe/HireMeUXUI';
+import HireMeFullStack from './pages/hireMe/HireMeFullStack';
+import UXProjects from './pages/hireMe/UXProjects';
 
 function App() {
   return (
@@ -10,6 +13,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HireMe />} />
+          <Route path="/hireme-uxui" element={<HireMeUXUI />} />
+          <Route path="/hireme-fullstack" element={<HireMeFullStack />} />
+          <Route path="/ux-projects" element={<UXProjects />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<AboutMe />} />
         </Routes>
