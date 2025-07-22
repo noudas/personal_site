@@ -5,9 +5,9 @@ export default function NovaFutura() {
   return (
     <div className="nf-case-container">
       <NovaFuturaHero
-        title="Nova Futura Project"
-        text="Nova Futura is a Brazilian financial services company that provides investment and banking services. This project was a redesign of the Nova Futura banking app and web portal."
-        img="https://s3-alpha-sig.figma.com/thumbnails/83f91dcc-61ce-40df-a705-c77644c3e4dc?Expires=1754265600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=czJZQphYpBFgMkQK4546ojXgDCmAAy11vlXp-YJYSO2-Gm4yoEFWiD~90jFRBtdUd39pcqNKRHoWPdL~i9OOMeOgmTOi~ojOdVYoi4hbYRCYon9d1TKR-8vvlzb3rWpXeLAIZY2PYsJiLMHc~mq4r-ZUYoM39ygSaAm64vLG~UYT81ZeZ1be2t7lKRM7IDOwAjw0m3yAqN1iUtj38LE9z7O1cPouq03ICDDjIuevE75jqRyWP7BFU0AuFQiMNa8674OcpDtR5S3iU31bywKYVtwA0Q0AmdMUd2qiHyE00BYExUcAFnQE5DxPC4E7nZ66z4TJNjxcJqcSX6ax1A2~DA__"
+        title={"Nova Futura Project\nRedesign"}
+        text={"Nova Futura is a Brazilian financial services company\nthat provides investment and banking services."}
+        img="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e2/1e/90/e21e90bf-9c42-fb24-02b6-56a0b84184a3/AppIcon-1x_U007emarketing-0-6-0-0-85-220-0.png/1200x600wa.png"
       >
         {/* You can add buttons or extra content here as children */}
       </NovaFuturaHero>

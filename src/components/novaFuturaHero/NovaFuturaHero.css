@@ -70,3 +70,40 @@
   position: relative;
   z-index: 1;
 }
+
+@media (max-width: 900px) {
+  .nf-hero-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    min-height: unset;
+  }
+  .nf-hero-content {
+    max-width: 100%;
+    width: 100%;
+  }
+  .nf-hero-image {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    min-height: 120px;
+    margin-top: 1.5rem;
+  }
+  .nf-hero-img-element {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .nf-hero-image::before {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom,
+        var(--azul-noite) 0%,
+        var(--azul-noite) 15%,
+        transparent 120%
+      );
+  }
+}
+  
