@@ -1,0 +1,82 @@
+/* src/pages/uxProjects/novaFutura.css */
+
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Primary Colors */
+  --azul-portal: #222F39;
+  --azul-noite: #293953;
+  --azul-jeans: #1C6C9D;
+  --azul-eletrico: #25A7DB;
+  --azul-nublado: #AACBDE;
+  --coral: #FD645F;
+
+  /* Secondary Colors */
+  --preto: #000000;
+  --cinza-5: #232323;
+  --cinza-4: #2E2E2E;
+  --cinza-3: #6B6B6B;
+  --cinza-2: #9A9A9A;
+  --cinza-1: #D2D2D2;
+  --off-white: #F5F5F5;
+  --branco: #FFFFFF;
+  --dark-for-dark: #121212;
+  --vontobel: #FFDB33;
+  --verde: #00B342;
+  --vermelho: #F90000;
+}
+
+/* Typography */
+.nf-title-light    { font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 22px; line-height: normal; }
+.nf-title-regular  { font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 22px; line-height: 120%; }
+.nf-title-medium   { font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 22px; line-height: 120%; }
+.nf-title-semibold { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 22px; line-height: 120%; }
+.nf-title-bold     { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 22px; line-height: 120%; }
+
+.nf-semititle-light    { font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 18px; line-height: 120%; }
+.nf-semititle-regular  { font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 18px; line-height: 120%; }
+.nf-semititle-medium   { font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 18px; line-height: 120%; }
+.nf-semititle-semibold { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px; line-height: 120%; }
+.nf-semititle-bold     { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 18px; line-height: 120%; }
+
+.nf-paragraph-light    { font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 16px; line-height: 120%; }
+.nf-paragraph-regular  { font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 16px; line-height: 120%; }
+.nf-paragraph-medium   { font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 16px; line-height: 120%; }
+.nf-paragraph-semibold { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 16px; line-height: 120%; }
+.nf-paragraph-bold     { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 16px; line-height: 120%; }
+
+/* Example background and accent usage */
+.nf-bg-portal { background: var(--azul-portal); }
+.nf-bg-default { background: var(--off-white); }
+.nf-text-coral { color: var(--coral); }
+.nf-text-default { color: var(--preto); }
+.nf-text-title { color: var(--azul-noite); }
+
+.nf-case-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.nf-section {
+  padding: 3rem 0;
+}
+.nf-bg-white { background: var(--branco); }
+.nf-bg-portal { background: var(--azul-portal); }
+.nf-text-portal { color: var(--azul-portal); }
+.nf-text-white { color: var(--branco); }
+.nf-flex { display: flex; gap: 2rem; align-items: center; }
+.nf-section-content { flex: 1; }
+.nf-section-image { flex: 1; display: flex; justify-content: center; }
+.nf-img-card { border-radius: 16px; box-shadow: 0 2px 16px rgba(0,0,0,0.08); max-width: 100%; }
+.nf-cards-row { display: flex; gap: 2rem; margin-top: 2rem; }
+.nf-card {
+  background: var(--branco);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(34,47,57,0.08);
+  padding: 2rem;
+  flex: 1;
+  min-width: 220px;
+}
+.nf-card-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+
