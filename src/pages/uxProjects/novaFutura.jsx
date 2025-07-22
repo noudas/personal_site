@@ -1,5 +1,10 @@
 import './novaFutura.css';
 import NovaFuturaHero from '../../components/novaFuturaHero/NovaFuturaHero';
+import NovaFuturaMiddle from '../../components/novaFuturaMiddle/NovaFuturaMiddle';
+import NovaHomeVelha from '../../assets/images/novaFutura/NovaHomeVelha.png';
+import NovaAval from '../../assets/images/novaFutura/NovaAval.png';
+import HomeDeskVelha from '../../assets/images/novaFutura/HomeDeskVelha.png';
+import HomeDeskVelha2 from '../../assets/images/novaFutura/HomeDesk.png';
 
 export default function NovaFutura() {
   return (
@@ -11,22 +16,28 @@ export default function NovaFutura() {
       >
         {/* You can add buttons or extra content here as children */}
       </NovaFuturaHero>
-      {/* Project Overview: Two-column layout */}
-      <section className="nf-section nf-bg-white nf-flex">
-        <div className="nf-section-content">
-          <h1 className="nf-title-bold nf-text-portal" style={{marginTop: '2rem'}}>Nova Futura: Design Process</h1>
-          <p className="nf-paragraph-regular nf-text-default">
-            <strong>Role:</strong> UX/UI Designer<br/>
-            <strong>Duration:</strong> Dec 2023 – May 2024 (6 months)<br/>
-            <strong>Location:</strong> São Paulo, Brazil (Hybrid)<br/>
-            <strong>Summary:</strong> Led the redesign of Nova Futura’s banking app and web portal, collaborating with development and marketing to deliver a cohesive, user-centered experience.
-          </p>
-        </div>
-        <div className="nf-section-image">
-          {/* Example: add a screenshot or card here */}
-          <img src="your-onboarding-screenshot.png" alt="Onboarding screen" className="nf-img-card" />
-        </div>
-      </section>
+
+      <NovaFuturaMiddle
+        leftTitle={`About the Project`}
+        leftText={`Nova Futura is a leading Brazilian financial services company.
+
+This project focused on redesigning their banking app and web portal to deliver a seamless, modern experience for investors and clients.`}
+        leftImages={[HomeDeskVelha2]} // optional
+        rightTitle={`The Challenge`}
+        rightText={`The legacy platform faced usability issues, outdated visuals, and a low Play Store rating (2.0).
+
+            Our challenge was to modernize the interface, improve user satisfaction, and align the digital presence with Nova Futura’s innovative brand.`}
+        rightImages={[NovaHomeVelha]} // optional
+        />
+      <NovaFuturaMiddle
+        leftTitle={`The Proposal`}
+        leftText={`We proposed a user-centered redesign, grounded in research and best practices.
+Our goal was to simplify complex flows, enhance accessibility, and create a cohesive experience across mobile and web.`}
+        rightTitle={`The Solution`}
+        rightText={`Through close collaboration with development and marketing, we introduced a new design system, streamlined navigation, and improved onboarding.
+The result: a platform that’s intuitive, visually appealing, and ready for future growth.`}
+        // rightImage="your-image-url.png" // optional
+        />
 
       {/* Problem Statement: Dark background */}
       <section className="nf-section nf-bg-portal">
