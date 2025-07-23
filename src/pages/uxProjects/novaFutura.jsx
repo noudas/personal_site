@@ -5,6 +5,9 @@ import NovaHomeVelha from '../../assets/images/novaFutura/NovaHomeVelha.png';
 import NovaAval from '../../assets/images/novaFutura/NovaAval.png';
 import HomeDeskVelha from '../../assets/images/novaFutura/HomeDeskVelha.png';
 import HomeDeskVelha2 from '../../assets/images/novaFutura/HomeDesk.png';
+import Mostrativo from '../../assets/images/novaFutura/Mostrativo.png';
+import Researchexample from '../../assets/images/novaFutura/Researchexample.png';
+import Researchexample2 from '../../assets/images/novaFutura/Researchexample 2.png';
 
 export default function NovaFutura() {
   return (
@@ -22,44 +25,52 @@ export default function NovaFutura() {
         leftText={`Nova Futura is a leading Brazilian financial services company.
 
 This project focused on redesigning their banking app and web portal to deliver a seamless, modern experience for investors and clients.`}
-        leftImages={[HomeDeskVelha2]} // optional
+        leftImages={[HomeDeskVelha2, NovaAval]} // optional
         rightTitle={`The Challenge`}
         rightText={`The legacy platform faced usability issues, outdated visuals, and a low Play Store rating (2.0).
 
             Our challenge was to modernize the interface, improve user satisfaction, and align the digital presence with Nova Futura’s innovative brand.`}
         rightImages={[NovaHomeVelha]} // optional
         />
+      <NovaFuturaHero
+        title={"Research"}
+        text={`We conducted a thorough analysis of the current app and web portal, identifying pain points and opportunities for improvement.
+          \n Compared to competitor, Nova Futura had the same features, but they were either outdated, not available or not working.`}
+        img={Mostrativo}
+      >
+      </NovaFuturaHero>
       <NovaFuturaMiddle
-        leftTitle={`The Proposal`}
-        leftText={`We proposed a user-centered redesign, grounded in research and best practices.
-Our goal was to simplify complex flows, enhance accessibility, and create a cohesive experience across mobile and web.`}
-        rightTitle={`The Solution`}
-        rightText={`Through close collaboration with development and marketing, we introduced a new design system, streamlined navigation, and improved onboarding.
-The result: a platform that’s intuitive, visually appealing, and ready for future growth.`}
-        // rightImage="your-image-url.png" // optional
+        leftTitle={`Market Research`}
+        leftText={`As the UX I was responsible for the research and analysis of the market, competitors and the user experience of the app and web portal.
+          By breaking down the competitors apps and seeing their advantages and disadvantages, using the 12 questions of the UX Matrix, I was able to identify the main features and the user experience of the app and web portal.
+          
+          What problem does the product/service solve?
+          \n What is the main objective of each page?
+          \n What is important to make clear to the user?
+          \n How did the user get here?
+          \n What tasks can the user perform on this page?
+          \n What questions do we have about the project?
+          \n What do we already know about the project?
+          \n What are our hypotheses?
+          \n How does the user feel when interacting with the product?
+          \n What does the user expect to happen when they interact with the product?`}
+          leftImages={[Researchexample2]}
+        rightTitle={`The Competition`}
+        rightText={`The main competitors of Nova Futura are:
+            - XP Investimentos
+            - Clear
+            - Toro
+            - Rico
+            - Avenue
+            - Banco Inter
+            - Banco Original
+            - Banco Pan
+            - Banco Rendimento
+            
+            As a way to understand better how they work, I broke down every single app of the competitors into wireframes, colors, fonts, etc.
+          \n This way I was able to see the main features of the app and web portal and how they work.`}
+          rightImages={[Researchexample]}
         />
-
-      {/* Problem Statement: Dark background */}
-      <section className="nf-section nf-bg-portal">
-        <h2 className="nf-title-semibold nf-text-white">Problem Statement</h2>
-        <p className="nf-paragraph-regular nf-text-default">
-          The legacy app suffered from usability issues and a low Play Store rating (2.0). The goal was to modernize the experience, improve user satisfaction, and align the digital presence with Nova Futura’s brand.
-        </p>
-      </section>
-
-      {/* Research: Cards for insights */}
-      <section className="nf-section nf-bg-white">
-        <h2 className="nf-title-semibold nf-text-portal">Research</h2>
-        <div className="nf-cards-row">
-          <div className="nf-card">
-            <span className="nf-card-icon">🔍</span>
-            <h3 className="nf-semititle-bold nf-text-portal">User Research</h3>
-            <p className="nf-paragraph-regular nf-text-default">Analyzed Play Store reviews and conducted interviews to identify pain points.</p>
-          </div>
-          {/* Add more cards as needed */}
-        </div>
-      </section>
-
       {/* Personas & User Journeys: Two-column layout */}
       <section className="nf-section nf-bg-portal nf-flex">
         <div className="nf-section-content">
