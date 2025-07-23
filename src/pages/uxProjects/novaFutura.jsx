@@ -71,19 +71,66 @@ This project focused on redesigning their banking app and web portal to deliver 
           \n This way I was able to see the main features of the app and web portal and how they work.`}
           rightImages={[Researchexample]}
         />
-      {/* Personas & User Journeys: Two-column layout */}
-      <section className="nf-section nf-bg-portal nf-flex">
-        <div className="nf-section-content">
-          <h2 className="nf-title-semibold nf-text-white">Personas & User Journeys</h2>
-          <p className="nf-paragraph-regular nf-text-default">
-            Defined primary user personas: investors seeking easy access to financial products, and support staff managing client accounts. Mapped user journeys to identify friction points and opportunities.
-          </p>
-        </div>
-        <div className="nf-section-image">
-          {/* Example: add a screenshot or card here */}
-          <img src="your-user-journeys-screenshot.png" alt="User journeys" className="nf-img-card" />
-        </div>
-      </section>
+        <NovaFuturaHero
+        title={"Personas & User Journeys"}
+        text={`We defined primary user personas: investors seeking easy access to financial products, and support staff managing client accounts. Mapped user journeys to identify friction points and opportunities.`}
+        img={Researchexample}
+        >
+        </NovaFuturaHero>
+        <NovaFuturaMiddle
+        leftTitle={`Personas`}
+        leftText={`The app was redesigned with a focus on attracting and supporting new investors, while still considering the needs and expectations of long-time users familiar with the previous version.
+
+                      The updates aimed to enhance the overall user experience and improve the app’s core features, making it more intuitive, accessible, and aligned with the needs of a diverse user base.
+
+
+                      Primary Users:
+
+                      New Investors (18–24 years old)
+                      Long-time Investors (55–65 years old)
+                      Support Staff (30–40 years old)
+                      Clients (40–50 years old)
+                      Admins (40–50 years old)
+
+
+                      Secondary Users:
+
+                      Investors from other banks looking to switch providers or access exclusive products available only through Nova Futura
+
+                      International investors, representing a small but notable segment of the user base
+
+
+          `}
+          rightTitle={`Examples of the Personas`}
+        rightText={`Financial Advisors (35–55 years old)
+May use the platform to help clients manage or recommend investments.
+Needs: Easy access to market data, portfolio overviews, and client account tools.
+
+
+Tech-Savvy Millennials (25–35 years old)
+May have investing experience and expect modern UX, quick insights, and mobile-first performance.
+Needs: Seamless app navigation, custom alerts, data visualization.
+
+
+Retired or Near-Retirement Investors (65+ years old)
+Often focused on capital preservation, passive income, or secure investments.
+Needs: Simplicity, low-risk product visibility, and trustworthy guidance.
+
+
+Prospective Investors / Visitors
+Not yet clients, but exploring the app for information or investment opportunities.
+Needs: Clear onboarding, transparent product information, credibility indicators.
+
+
+Compliance & Regulatory Auditors
+May need access to transaction logs, audit trails, and reporting features.
+Needs: Back-end access, data integrity, and policy adherence tools.
+
+
+Marketing & Sales Team
+Uses the app's data to understand user behavior and promote relevant financial products.
+Needs: Analytics dashboards, user segmentation tools, campaign feedback loops.`}
+        />
 
       {/* Ideation & Wireframes: Dark background */}
       <section className="nf-section nf-bg-portal">
