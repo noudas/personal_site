@@ -8,6 +8,15 @@ import HomeDeskVelha2 from '../../assets/images/novaFutura/HomeDesk.png';
 import Mostrativo from '../../assets/images/novaFutura/Mostrativo.png';
 import Researchexample from '../../assets/images/novaFutura/Researchexample.png';
 import Researchexample2 from '../../assets/images/novaFutura/Researchexample 2.png';
+import UserFlow1 from '../../assets/images/novaFutura/UserFlow1.png';
+import UserFlow2 from '../../assets/images/novaFutura/UserFlow2.png';
+import Flow1 from '../../assets/images/novaFutura/Flow1.png';
+import Flow2 from '../../assets/images/novaFutura/Flow2.png';
+import Flow3 from '../../assets/images/novaFutura/Flow3.png';
+import TelaInicial from '../../assets/images/novaFutura/TelaIncial.png';
+import TelaInicialWire from '../../assets/images/novaFutura/TelaIncialWire.png';
+import HomeFinal from '../../assets/images/novaFutura/HomeFinal.png';
+import HomeWire from '../../assets/images/novaFutura/HomeWire.png';
 
 export default function NovaFutura() {
   return (
@@ -132,21 +141,41 @@ Uses the app's data to understand user behavior and promote relevant financial p
 Needs: Analytics dashboards, user segmentation tools, campaign feedback loops.`}
         />
 
-      {/* Ideation & Wireframes: Dark background */}
-      <section className="nf-section nf-bg-portal">
-        <h2 className="nf-title-semibold nf-text-white">Ideation & Wireframes</h2>
-        <p className="nf-paragraph-regular nf-text-default">
-          Collaborated with development and marketing to brainstorm solutions. Created wireframes in Figma, iterating based on feedback from cross-functional teams.
-        </p>
-      </section>
+      <NovaFuturaMiddle
+        leftTitle={`User Journeys`}
+        leftText={`We mapped user journeys of the competitors and the app, identifying friction points and opportunities.
+          \n We identified the main features of the app and web portal and how they work.
+          \n At the same time mapping the user journeys of the primary users, and the flow of the app.`}
+          leftImages={[UserFlow1, UserFlow2]}
+          rightTitle={`User Flows`}
+          rightText={`We mapped the user flows of the primary users using Figma's prototyping tool, and the flow of the app.`}
+          rightImages={[Flow1, Flow2, Flow3]}
+        />
 
-      {/* UI Design: White background */}
-      <section className="nf-section nf-bg-white">
-        <h2 className="nf-title-semibold nf-text-portal">UI Design</h2>
-        <p className="nf-paragraph-regular nf-text-default">
-          Developed a modern, accessible interface using the new color palette and Montserrat typography. Ensured consistency across app and portal, aligning with marketing’s visual standards.
-        </p>
-      </section>
+      {/* Ideation & Wireframes: Dark background */}
+      <NovaFuturaHero
+        title={"Ideation, Wireframes & Prototyping"}
+        text={`After breaking down the competitors into wireframes, I reused the wireframes of the competitors to create the wireframes of the app.
+          \n After showing the wireframes to the stakeholders, I was able to get the feedback and improve the wireframes.
+          \n After that, I created the wireframes of the app and web portal.`}
+        img={TelaInicial}
+      >
+      </NovaFuturaHero>
+      <NovaFuturaMiddle
+        leftTitle={`Wireframes Before`}
+        leftImages={[HomeWire]}
+        rightTitle={`Wireframes After`}
+        rightImages={[HomeFinal]} 
+        />
+
+      <NovaFuturaMiddle
+        leftTitle={"Prototypes"}
+        leftText={`Using Figma's prototyping tool, I created the prototypes of the app and web portal.
+          \n I was able to test the prototypes with the users and get the feedback.
+          \n I was able to improve the prototypes based on the feedback.
+          \n I was able to create the prototypes of the app and web portal.`}
+      >
+      </NovaFuturaMiddle>
 
       {/* Prototyping & Testing: Dark background */}
       <section className="nf-section nf-bg-portal">
