@@ -13,10 +13,19 @@ import UserFlow2 from '../../assets/images/novaFutura/UserFlow2.png';
 import Flow1 from '../../assets/images/novaFutura/Flow1.png';
 import Flow2 from '../../assets/images/novaFutura/Flow2.png';
 import Flow3 from '../../assets/images/novaFutura/Flow3.png';
+import FlowFinal from '../../assets/images/novaFutura/FlowFinal.png';
 import TelaInicial from '../../assets/images/novaFutura/TelaIncial.png';
 import TelaInicialWire from '../../assets/images/novaFutura/TelaIncialWire.png';
 import HomeFinal from '../../assets/images/novaFutura/HomeFinal.png';
 import HomeWire from '../../assets/images/novaFutura/HomeWire.png';
+import TesteMenu1 from '../../assets/images/novaFutura/TesteMenu (1).jpg'; 
+import TesteMenu2 from '../../assets/images/novaFutura/TesteMenu (2).jpg';
+import TesteMenu3 from '../../assets/images/novaFutura/TesteMenu (3).jpg';
+import TesteMenu4 from '../../assets/images/novaFutura/TesteMenu (4).jpg';
+import TesteMenu5 from '../../assets/images/novaFutura/TesteMenu (5).jpg';
+import MenuNav1 from '../../assets/images/novaFutura/MenuNav (1).png';
+import MenuNav2 from '../../assets/images/novaFutura/MenuNav (2).png';
+import MenuNav3 from '../../assets/images/novaFutura/MenuNav (3).png';
 
 export default function NovaFutura() {
   return (
@@ -152,7 +161,6 @@ Needs: Analytics dashboards, user segmentation tools, campaign feedback loops.`}
           rightImages={[Flow1, Flow2, Flow3]}
         />
 
-      {/* Ideation & Wireframes: Dark background */}
       <NovaFuturaHero
         title={"Ideation, Wireframes & Prototyping"}
         text={`After breaking down the competitors into wireframes, I reused the wireframes of the competitors to create the wireframes of the app.
@@ -168,30 +176,33 @@ Needs: Analytics dashboards, user segmentation tools, campaign feedback loops.`}
         rightImages={[HomeFinal]} 
         />
 
+        <NovaFuturaMiddle
+        leftTitle={`Tests and Games`}
+        leftText={`One of the may tests done was the menu tests and how people see it.
+          I printed out all of the menu choices and it's subclasses, by calling stakeholders over, I was able to get the feedback and see how they see it.
+          Afterwards, I called investors over to the bank, and I asked them to choose a menu choice and see how they see it.
+          So on and so forth with every functionality and feature.`}
+        leftImages={[TesteMenu1, TesteMenu2]}
+        rightImages={[TesteMenu3, TesteMenu4, TesteMenu5]}
+        />
+
+        <NovaFuturaMiddle
+        leftTitle={`Result Example`}
+        leftText={`As a result of the tests, I was able to improve the menu navigation, and the overall user experience of the app.`}
+        leftImages={[MenuNav1]}
+        rightImages={[MenuNav2, MenuNav3]}
+        />
+
       <NovaFuturaMiddle
         leftTitle={"Prototypes"}
         leftText={`Using Figma's prototyping tool, I created the prototypes of the app and web portal.
           \n I was able to test the prototypes with the users and get the feedback.
           \n I was able to improve the prototypes based on the feedback.
           \n I was able to create the prototypes of the app and web portal.`}
+          rightImages={[FlowFinal]}
       >
       </NovaFuturaMiddle>
 
-      {/* Prototyping & Testing: Dark background */}
-      <section className="nf-section nf-bg-portal">
-        <h2 className="nf-title-semibold nf-text-white">Prototyping & Testing</h2>
-        <p className="nf-paragraph-regular nf-text-default">
-          Built interactive prototypes in Figma. Conducted iterative testing with users and developers, refining designs based on feedback and agile sprints.
-        </p>
-      </section>
-
-      {/* Results & Learnings: White background */}
-      <section className="nf-section nf-bg-white">
-        <h2 className="nf-title-semibold nf-text-portal">Results & Learnings</h2>
-        <p className="nf-paragraph-regular nf-text-default">
-          The app’s Play Store rating improved from 2.0 to 2.8. The new version was ready for deployment before my departure. Learned the value of close collaboration and iterative design in a fast-paced, hybrid environment.
-        </p>
-      </section>
     </div>
   );
 }
