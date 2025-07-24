@@ -27,6 +27,7 @@ import TesteMenu5 from '../../assets/images/novaFutura/TesteMenu (5).jpg';
 import MenuNav1 from '../../assets/images/novaFutura/MenuNav (1).png';
 import MenuNav2 from '../../assets/images/novaFutura/MenuNav (2).png';
 import MenuNav3 from '../../assets/images/novaFutura/MenuNav (3).png';
+import NavigationButtons from '../../components/NavigationButtons/NavigationButtons';
 
 export default function NovaFutura() {
   return (
@@ -256,6 +257,13 @@ Working within that tension taught me that designing for finance isn't just abou
             - Talking to users: 1 week
             - Deploying: 1 week
             `}
+      />
+
+      <NavigationButtons
+        onBack={() => window.location.href = '/ux-projects'}
+        onNext={() => window.location.href = '/ux-projects'}
+        showBack={true}
+        showNext={true}
       />
 
     </div>

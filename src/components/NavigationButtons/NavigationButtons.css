@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap'); /* Readable fantasy font */
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  gap: 2rem;
+}
+
+.nav-btn {
+  background: linear-gradient(135deg, #e2c290 0%, #bfa76f 100%);
+  border: 4px solid #7c5a1f;
+  border-radius: 18px;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(60, 40, 10, 0.25), 0 0 0 4px #fff8e1 inset;
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  color: #4b2e05;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 
+    background 0.2s,
+    box-shadow 0.2s,
+    transform 0.1s;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-btn:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  box-shadow: 0 0 16px 4px #ffe082, 0 0 8px 2px #fffde7 inset;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.nav-btn-back {
+  flex-direction: row;
+}
+
+.nav-btn-next {
+  flex-direction: row;
+}
+
+.arrow-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+  filter: drop-shadow(0 0 6px #ffe082) drop-shadow(0 0 2px #fffde7);
+}
+
+.arrow-back {
+  transform: rotate(90deg);
+  margin-right: 1rem;
+}
+
+.arrow-next {
+  transform: rotate(-90deg);
+  margin-left: 1rem;
+}
+
+.nav-btn:hover, .nav-btn:focus {
+  background: linear-gradient(135deg, #ffe082 0%, #bfa76f 100%);
+  box-shadow: 0 0 24px 8px #ffe082, 0 0 0 4px #fff8e1 inset;
+  color: #7c5a1f;
+  transform: scale(1.05);
+  outline: none;
+}
+
+.nav-btn h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  margin: 0;
+  color: inherit;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 2px #fffde7, 0 0 4px #ffe082;
+  user-select: none;
+}
