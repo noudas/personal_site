@@ -3,6 +3,7 @@ import NovaFuturaHero from '../../components/novaFuturaHero/NovaFuturaHero';
 import NovaFuturaMiddle from '../../components/novaFuturaMiddle/NovaFuturaMiddle';
 import NovaHomeVelha from '../../assets/images/novaFutura/NovaHomeVelha.png';
 import NovaAval from '../../assets/images/novaFutura/NovaAvalWork.png';
+import NovaAval28 from '../../assets/images/novaFutura/NovaAval28.png';
 import HomeDeskVelha from '../../assets/images/novaFutura/HomeDeskVelha.png';
 import HomeDeskVelha2 from '../../assets/images/novaFutura/HomeDesk.png';
 import Mostrativo from '../../assets/images/novaFutura/Mostrativo.png';
@@ -50,6 +51,7 @@ This project focused on redesigning their banking app and web portal to deliver 
             Our challenge was to modernize the interface, improve user satisfaction, and align the digital presence with Nova Futura’s innovative brand.`}
         rightImages={[NovaHomeVelha]} // optional
         />
+
       <NovaFuturaHero
         title={"Research"}
         text={`We conducted a thorough analysis of the current app and web portal, identifying pain points and opportunities for improvement.
@@ -202,6 +204,59 @@ Needs: Analytics dashboards, user segmentation tools, campaign feedback loops.`}
           rightImages={[FlowFinal]}
       >
       </NovaFuturaMiddle>
+
+      <NovaFuturaHero
+        title={"Final Outcomes & Reflection"}
+        text={`My thoughts and learnings from this project:`}
+        img={HomeDeskVelha2}
+      >
+      </NovaFuturaHero>
+
+      <NovaFuturaMiddle
+        leftTitle={"Ratings"}
+        leftText={`Improving the legacy app’s Play Store rating from 2.0 to 2.8 was a humbling experience.
+          \n Reaching out directly to both longtime and new users—listening to their frustrations and feedback—reshaped how I saw the product. It deepened my appreciation for its impact while also exposing difficult truths about past decisions.  
+          \n Before my departure, I completed the design for the new version, which was later deployed.
+          \n The process taught me the real value of empathy, adaptability, and collaborative iteration in a fast-paced, hybrid team.
+`}
+          rightImages={[NovaAval28]}
+      />
+
+      <NovaFuturaMiddle
+        leftTitle={"Reflection"}
+        leftText={`Banking culture is unlike any other industry I’ve worked in. Understanding users’ needs and expectations was especially challenging—not just because of the complexity of financial systems, but because the product is deeply tied to the institution’s values and identity.
+
+This project reflected that dynamic in both positive and difficult ways. On one hand, tradition creates a strong foundation; it preserves the company’s core values and fosters trust. On the other, it can be a barrier to change, making it harder to shift mindsets or introduce new ways of thinking.
+
+Working within that tension taught me that designing for finance isn't just about usability—it's about navigating legacy, trust, and culture all at once.
+          `}
+          rightTitle={`Process & Timeline`}
+          rightText={`After 6 months of intensive work and research, it feels good to watch your project have a positive impact.
+            \n Months of research: 1 month
+            -------------------------------------
+            - Getting the company's values and identity: 1 week
+            - Finding main competitors: 2 days
+            - Creating personas and user journeys: 3 days
+            - Breaking down the competitors: 2 weeks
+            \n Months of design and iterating: 2 months
+            -------------------------------------------
+            - Creating wireframes: 3 weeks
+            - Creating Design System: 1 week
+            - Creating prototypes: 2 weeks
+            - Talking to stakeholders: 2 week
+
+            \n Months of testing and feedback: 2 months
+            -------------------------------------------
+            - Creating tests and games: 4 weeks
+            - Creating prototypes: 2 week
+            - Creating feedback: 2 week
+            \n Months of implementation and deployment: 1 month
+            -------------------------------------------
+            - Programming and QA: 2 weeks
+            - Talking to users: 1 week
+            - Deploying: 1 week
+            `}
+      />
 
     </div>
   );
