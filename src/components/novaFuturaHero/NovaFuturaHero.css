@@ -73,6 +73,36 @@
   z-index: 1;
 }
 
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.8s ease-out both;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 0.8s ease-out both;
+}
+
 @media (max-width: 900px) {
   .nf-hero-section {
     flex-direction: column;

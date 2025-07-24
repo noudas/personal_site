@@ -36,6 +36,7 @@ export default function NovaFutura() {
         title={"Nova Futura Project\nRedesign"}
         text={"Nova Futura is a Brazilian financial services company\nthat provides investment and banking services."}
         img="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e2/1e/90/e21e90bf-9c42-fb24-02b6-56a0b84184a3/AppIcon-1x_U007emarketing-0-6-0-0-85-220-0.png/1200x600wa.png"
+        fadeFrom="left"
       >
         {/* You can add buttons or extra content here as children */}
       </NovaFuturaHero>
@@ -58,6 +59,7 @@ This project focused on redesigning their banking app and web portal to deliver 
         text={`We conducted a thorough analysis of the current app and web portal, identifying pain points and opportunities for improvement.
           \n Compared to competitor, Nova Futura had the same features, but they were either outdated, not available or not working.`}
         img={Mostrativo}
+        fadeFrom="left"
       >
       </NovaFuturaHero>
       <NovaFuturaMiddle
@@ -96,6 +98,7 @@ This project focused on redesigning their banking app and web portal to deliver 
         title={"Personas & User Journeys"}
         text={`We defined primary user personas: investors seeking easy access to financial products, and support staff managing client accounts. Mapped user journeys to identify friction points and opportunities.`}
         img={Researchexample}
+        fadeFrom="left"
         >
         </NovaFuturaHero>
         <NovaFuturaMiddle
@@ -170,6 +173,7 @@ Needs: Analytics dashboards, user segmentation tools, campaign feedback loops.`}
           \n After showing the wireframes to the stakeholders, I was able to get the feedback and improve the wireframes.
           \n After that, I created the wireframes of the app and web portal.`}
         img={TelaInicial}
+        fadeFrom="left"
       >
       </NovaFuturaHero>
       <NovaFuturaMiddle
@@ -210,6 +214,7 @@ Needs: Analytics dashboards, user segmentation tools, campaign feedback loops.`}
         title={"Final Outcomes & Reflection"}
         text={`My thoughts and learnings from this project:`}
         img={HomeDeskVelha2}
+        fadeFrom="left"
       >
       </NovaFuturaHero>
 
