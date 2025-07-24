@@ -2,7 +2,7 @@ import './novaFutura.css';
 import NovaFuturaHero from '../../components/novaFuturaHero/NovaFuturaHero';
 import NovaFuturaMiddle from '../../components/novaFuturaMiddle/NovaFuturaMiddle';
 import NovaHomeVelha from '../../assets/images/novaFutura/NovaHomeVelha.png';
-import NovaAval from '../../assets/images/novaFutura/NovaAval.png';
+import NovaAval from '../../assets/images/novaFutura/NovaAvalWork.png';
 import HomeDeskVelha from '../../assets/images/novaFutura/HomeDeskVelha.png';
 import HomeDeskVelha2 from '../../assets/images/novaFutura/HomeDesk.png';
 import Mostrativo from '../../assets/images/novaFutura/Mostrativo.png';
